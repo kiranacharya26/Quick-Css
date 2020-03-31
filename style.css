@@ -53,7 +53,7 @@
 
 .stagger-menu li {
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 17px;
     opacity: 0;
     transform: translateX(100%);
     transition-property: opacity, transform;

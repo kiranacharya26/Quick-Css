@@ -72,7 +72,8 @@
 
 /*button border*/
 
-.button {
+
+/* .button {
     background-color: red;
     border: none;
     color: black;
@@ -111,4 +112,24 @@
 .button:hover:after {
     height: 100%;
     width: 100%;
+} */
+
+
+/*hover shadow box*/
+
+.hover-shadow-box-animation {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0px);
+    box-shadow: 0 0 1px transparent;
+    margin: 10px;
+    transition-duration: 0.5s;
+    transition-property: box-shadow, transform;
+}
+
+.hover-shadow-box-animation:hover,
+.hover-shadow-box-animation:focus,
+.hover-shadow-box-animation:active {
+    box-shadow: 10px 10px 10px -5px red;
+    transform: scale(1.2);
 }

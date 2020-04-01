@@ -1,4 +1,4 @@
-/* @keyframes bouncing-loader {
+/* /* @keyframes bouncing-loader {
     to {
       opacity: 0.1;
       transform: translate3d(0, -1rem, 0);
@@ -30,7 +30,8 @@
 
 /*staggerd anim*/
 
-.container {
+
+/* .container {
     overflow-x: hidden;
     width: 100%;
 }
@@ -62,8 +63,52 @@
 }
 
 
-/* .menu-toggler:checked~.stagger-menu li {
+ .menu-toggler:checked~.stagger-menu li {
     opacity: 1;
     transform: translateX(0);
     transition-delay: calc(0.556s * var(--i));
-} */
+}   */
+
+
+/*button border*/
+
+.button {
+    background-color: red;
+    border: none;
+    color: black;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+}
+
+.button:before,
+.button:after {
+    border: 0 solid transparent;
+    transition: all 0.25s;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+}
+
+.button:before {
+    border-top: 2px solid orange;
+    left: 0px;
+    top: -5px;
+}
+
+.button:after {
+    border-bottom: 2px solid green;
+    bottom: -5px;
+    right: 0px;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.button:hover:before,
+.button:hover:after {
+    height: 100%;
+    width: 100%;
+}

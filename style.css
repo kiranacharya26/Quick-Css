@@ -292,7 +292,8 @@ li a:focus::before {
 
 /*Masonry Layout*/
 
-.masonry-container {
+
+/* .masonry-container {
     --column-count-small: 1;
     --column-count-medium: 2;
     --column-count-large: 3;
@@ -329,4 +330,17 @@ li a:focus::before {
 
 .masonry-brick:first-child {
     margin: 0 0 var(--column-gap);
+} */
+
+
+/*Height transition*/
+
+.el {
+    transition: max-height 0.5s;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.trigger:hover>.el {
+    max-height: var(--max-height);
 }

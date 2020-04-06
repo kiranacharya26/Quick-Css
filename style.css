@@ -180,7 +180,8 @@ li a:focus::before {
 
 /*Hamburger*/
 
-.hamburger-menu {
+
+/* .hamburger-menu {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -209,4 +210,29 @@ li a:focus::before {
 
 .hamburger-menu:hover .bottom {
     transform: rotate(-45deg);
+} */
+
+
+/*Pop Menu*/
+
+.reference {
+    position: relative;
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+
+.popout-menu {
+    position: absolute;
+    visibility: hidden;
+    left: 100%;
+    background: #333;
+    color: wheat;
+    padding: 15px;
+}
+
+.reference:hover>.popout-menu,
+.reference:focus>.popout-menu,
+.reference:focus-within>.popout-menu {
+    visibility: visible;
 }

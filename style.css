@@ -241,7 +241,8 @@ li a:focus::before {
 
 /*Donut spinner*/
 
-@keyframes donut-spin {
+
+/* @keyframes donut-spin {
     0% {
         transform: rotate(0deg);
     }
@@ -258,4 +259,31 @@ li a:focus::before {
     width: 30px;
     height: 30px;
     animation: donut-spin 1.2s linear infinite;
+} */
+
+
+/*hover underline anim*/
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: green;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

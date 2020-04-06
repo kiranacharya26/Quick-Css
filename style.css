@@ -138,7 +138,8 @@
 
 /*Nav List*/
 
-nav ul {
+
+/* nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -174,4 +175,38 @@ li a::before {
 li a:hover::before,
 li a:focus::before {
     transform: scale(1);
+} */
+
+
+/*Hamburger*/
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    height: 5px;
+    background: black;
+    border-radius: 4px;
+    margin: 3px 0;
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+.hamburger-menu:hover .top {
+    transform: rotate(45deg);
+}
+
+.hamburger-menu:hover .middle {
+    opacity: 0;
+}
+
+.hamburger-menu:hover .bottom {
+    transform: rotate(-45deg);
 }

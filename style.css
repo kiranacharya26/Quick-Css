@@ -349,16 +349,17 @@ li a:focus::before {
 
 /*Dynamic-shadow*/
 
-.dynamic-shadow {
+
+/* .dynamic-shadow {
     position: relative;
     width: 10rem;
     height: 10rem;
     background: #52c234;
-    /* fallback for old browsers */
+    
     background: -webkit-linear-gradient(to right, #061700, #52c234);
-    /* Chrome 10-25, Safari 5.1-6 */
+    
     background: linear-gradient(to right, #061700, #52c234);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     z-index: 1;
 }
 
@@ -372,4 +373,18 @@ li a:focus::before {
     filter: blur(0.4rem);
     opacity: 0.7;
     z-index: -1;
+} */
+
+
+/*Sibling fade Nav*/
+
+span {
+    padding: 0 1rem;
+    transition: opacity 0.2s;
+    color: black;
+}
+
+.sibling-fade:hover span:not(:hover) {
+    opacity: 0.5;
+    color: red;
 }

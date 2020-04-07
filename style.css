@@ -378,7 +378,8 @@ li a:focus::before {
 
 /*Sibling fade Nav*/
 
-span {
+
+/* span {
     padding: 0 1rem;
     transition: opacity 0.2s;
     color: black;
@@ -387,4 +388,41 @@ span {
 .sibling-fade:hover span:not(:hover) {
     opacity: 0.5;
     color: red;
+} */
+
+
+/*Pulse loader*/
+
+.ripple-loader {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.ripple-loader div {
+    position: absolute;
+    border: 3px solid purple;
+    border-radius: 50%;
+    animation: ripple-loader 0.7s ease-out infinite;
+}
+
+.ripple-loader div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes ripple-loader {
+    0% {
+        top: 30px;
+        left: 30px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 60px;
+        opacity: 0;
+    }
 }

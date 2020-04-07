@@ -335,7 +335,8 @@ li a:focus::before {
 
 /*Height transition*/
 
-.el {
+
+/* .el {
     transition: max-height 0.5s;
     overflow: hidden;
     max-height: 0;
@@ -343,4 +344,32 @@ li a:focus::before {
 
 .trigger:hover>.el {
     max-height: var(--max-height);
+} */
+
+
+/*Dynamic-shadow*/
+
+.dynamic-shadow {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    background: #52c234;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061700, #52c234);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061700, #52c234);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 1;
+}
+
+.dynamic-shadow::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    top: 0.5rem;
+    filter: blur(0.4rem);
+    opacity: 0.7;
+    z-index: -1;
 }

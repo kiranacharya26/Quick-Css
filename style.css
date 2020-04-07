@@ -431,7 +431,8 @@ li a:focus::before {
 
 /*Toggle switch*/
 
-.switch {
+
+/* .switch {
     position: relative;
     display: inline-block;
     width: 40px;
@@ -464,4 +465,11 @@ input[type='checkbox']:checked+.switch {
 .offscreen {
     position: absolute;
     left: -9999px;
+} */
+
+
+/*Disable selection*/
+
+.unselectable {
+    user-select: none;
 }
